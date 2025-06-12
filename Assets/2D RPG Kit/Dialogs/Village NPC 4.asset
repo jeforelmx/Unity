@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2556bb0d236966468fd1e6bd2eeaffd, type: 3}
+  m_Name: Village NPC 4
+  m_EditorClassIdentifier: 
+  portraits: []
+  lines:
+  - "//\u53CC\u9A6C\u5C3E\u5C11\u5973"
+  - '**'
+  - "\u5927\u796D\u53F8\u66FE\u7ECF\u8BF4\u8FC7\uFF0C\u6751\u4E2D\u5B9D\u7BB1\u7684\u5BC6\u7801\u662F4\u4F4D\u6570\u5B57\u3002"
+  - "\u4F46\u5982\u679C\u4E0D\u662F\u6709\u7F18\u4EBA\uFF0C\u6BCF\u4EBA\u53EA\u6709\u4E09\u6B21\u8BD5\u9519\u673A\u4F1A\u3002"
+  - "\u8FD9\u4E48\u591A\u5E74\u8FC7\u53BB\uFF0C\u8FD8\u662F\u6CA1\u6709\u4EBA\u6253\u5F00\uFF0C\u4F60\u4F1A\u662F\u90A3\u4E2A\u6709\u7F18\u4EBA\u5417\uFF1F"
+  closingMessage: []

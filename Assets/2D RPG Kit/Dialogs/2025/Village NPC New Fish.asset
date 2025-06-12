@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2556bb0d236966468fd1e6bd2eeaffd, type: 3}
+  m_Name: Village NPC New Fish
+  m_EditorClassIdentifier: 
+  portraits: []
+  lines:
+  - "//\u519C\u6237"
+  - '**'
+  - "\u4F60\u6253\u8D62\u4E86\u98CE\u66B4\u7834\u788E\u8005\uFF01\uFF01"
+  - "\u90A3\u4F60\u63A5\u4E0B\u6765\u8981\u53BB\u8BA8\u4F10\u6D77\u6D0B\u7834\u788E\u8005\u4E86\u5427\uFF01"
+  - "\u542C\u8BF4\u4E0A\u4E00\u4EFB\u52C7\u8005\u5728\u6E56\u5E95\u653E\u4E86\u4EC0\u4E48\u4E1C\u897F\uFF0C\u4F60\u53EF\u4EE5\u8BD5\u7740\u9493\u9493\u770B\uFF01"
+  - "\u5077\u5077\u544A\u8BC9\u4F60\uFF0C\u9760\u8FD1\u6E56\u8FB9\u6309\u4E0BF\u5C31\u53EF\u4EE5\u9493\u9C7C\u54AF"
+  closingMessage: []

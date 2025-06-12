@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2556bb0d236966468fd1e6bd2eeaffd, type: 3}
+  m_Name: Mom Dialog 3
+  m_EditorClassIdentifier: 
+  portraits:
+  - {fileID: 699703873648253923, guid: 5dee9006179220145ba7295536490dbc, type: 3}
+  lines:
+  - //Rem
+  - '**0'
+  - ......
+  - "//\u5411\u5BFC"
+  - '**'
+  - "\u4F60\u8981\u53BB\u63A2\u7D22\u68A6\u5883\u5417\uFF1F"
+  - "\u8BF4\u8D77\u6765\u6751\u5B50\u4E2D\u7684\u786E\u6709\u4E00\u540D\u68A6\u5883\u5B88\u62A4\u8005"
+  - "\u4F46\u4ED6\u4ECE\u4E0D\u51FA\u95E8\uFF0C\u4F60\u53EF\u4EE5\u53BB\u62DC\u8BBF\u4E00\u4E0B\u3002"
+  - "\u6709\u5B88\u62A4\u8005\u540C\u884C\u7684\u8BDD\u65C5\u9014\u4F1A\u4FDD\u9669\u5F88\u591A\u3002"
+  - //Rem
+  - '**0'
+  - "\uFF01\uFF01\uFF01"
+  - "//\u5411\u5BFC"
+  - '**'
+  - "\u53E6\u5916"
+  - "\u591A\u4E0E\u6751\u5B50\u4E2D\u7684\u4EBA\u4EA4\u6D41\uFF0C\u6216\u8BB8\u4F1A\u6709\u610F\u60F3\u4E0D\u5230\u7684\u6536\u83B7"
+  closingMessage: []

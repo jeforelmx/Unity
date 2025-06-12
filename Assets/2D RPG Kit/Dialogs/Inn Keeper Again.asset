@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2556bb0d236966468fd1e6bd2eeaffd, type: 3}
+  m_Name: Inn Keeper Again
+  m_EditorClassIdentifier: 
+  portraits:
+  - {fileID: 21300000, guid: d3bc561691ee2e648b07310c2307dbef, type: 3}
+  lines:
+  - "//\u53F2\u4F20\u5947"
+  - '**'
+  - "\u563F~\u4EB2\u7231\u7684\uFF0C\u770B\u6765\u4F60\u5DF2\u7ECF\u89C1\u8FC7\u98CE\u66B4\u7834\u788E\u8005\u4E86\uFF0C\u611F\u89C9\u5982\u4F55"
+  - //rem
+  - '**0'
+  - ......
+  - "//\u53F2\u4F20\u5947"
+  - '**'
+  - "\u770B\u6765\u4F60\u4EEC\u7684\u76F8\u5904\u5E76\u4E0D\u878D\u6D3D\uFF0C\u610F\u6599\u4E4B\u4E2D"
+  - "\u603B\u4E4B\uFF0C\u4F60\u5DF2\u7ECF\u8E0F\u4E0A\u4E86\u5F52\u4E61\u4E4B\u8DEF\uFF0C\u662F\u4E0D\u662F\u5F88\u5174\u594B\uFF01"
+  - "\u5BF9\u4E86\uFF0C\u63D0\u9192\u4F60\u4E00\u4E0B\uFF0C\u4E0D\u8981\u5B8C\u5168\u76F8\u4FE1\u8FD9\u4E2A\u4E16\u754C\u7684\u4EBA\u3002"
+  - "\u81F3\u4E8E\u7406\u7531\u561B\uFF0C\u68A6\u5883\u4E16\u754C\uFF0C\u771F\u76F8\u603B\u662F\u8352\u8BDE\u7684\u4E0D\u662F\u4E48\u3002"
+  - "\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8~"
+  - "\u8FD8\u662F\u90A3\u53E5\u8BDD\uFF0C\u5728\u4F60\u79BB\u5F00\u8FD9\u4E2A\u4E16\u754C\u4E4B\u524D\uFF0C\u6211\u4F1A\u4E00\u76F4\u5728\u8FD9\u91CC\u3002"
+  - "\u5BF9\u4E86"
+  - "\u8FD9\u6709\u5C01\u4FE1\uFF0C\u4F60\u6216\u8BB8\u611F\u5174\u8DA3~~"
+  closingMessage:
+  - "//\u53F2\u4F20\u5947"
+  - '**'
+  - See you~~
