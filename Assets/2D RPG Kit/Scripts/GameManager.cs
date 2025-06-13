@@ -75,6 +75,19 @@ public class GameManager : MonoBehaviour {
     public bool noEncounters;
 
     // Use this for initialization
+
+    public static string previousSceneName;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject); // 保持这个对象不被销毁
+    }
+
+    public static void LoadFishingScene()
+    {
+        previousSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("Fishing");
+    }
     void Start () {
         instance = this;
 

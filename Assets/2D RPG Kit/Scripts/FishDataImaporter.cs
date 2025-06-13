@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class FishItemImporter : EditorWindow
 {
     private TextAsset csvFile;
-    private string outputFolder = "Assets/2D RPG Kit/Prefabs/Items/New Fish";
+    private string outputFolder = "/2D RPG Kit/Prefabs/Items/New Fish";
 
     [MenuItem("Tools/Fish Item + Data Importer")]
     public static void ShowWindow()

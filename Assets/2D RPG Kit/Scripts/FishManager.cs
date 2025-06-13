@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine.SceneManagement;
 public class FishingManager : MonoBehaviour
 {
     // UI Elements
@@ -11,6 +12,8 @@ public class FishingManager : MonoBehaviour
     public RectTransform targetArea;
     public RectTransform hookPointer;
     public Slider staminaBar;
+
+    public GameObject fishItemPrefab;
 
     // Fish Settings
     private FishData[] availableFishes;
@@ -52,16 +55,12 @@ public class FishingManager : MonoBehaviour
     void Start()
     {
         LoadFishData();
-        minigamePanel.SetActive(false);
+        StartCatch();
         screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StartCatch();
-        }
 
         if (isCatching)
         {
@@ -156,7 +155,6 @@ public class FishingManager : MonoBehaviour
         }
 
         currentFish = filteredFishes[Random.Range(0, filteredFishes.Count)];
-
         currentStamina = currentFish.stamina;
 
         // 获取 RectTransform 组件
@@ -178,7 +176,7 @@ public class FishingManager : MonoBehaviour
         // 初始化屏幕中心点和目标区域 Rect（用于逻辑判断）
         screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
         float newY = screenCenter.y - areaSize.y / 2;
-        targetRect = new Rect(screenCenter.x - areaSize.x / 2, newY, areaSize.x, areaSize.y);
+        targetRect = GetWorldScreenRect(targetArea.GetComponent<RectTransform>());
 
         // 设置目标区域移动参数
         targetMoveRange = Random.Range(50f, 150f); // 可根据稀有度调整
@@ -259,7 +257,9 @@ public class FishingManager : MonoBehaviour
 
         // 6. 更新位置
         targetArea.anchoredPosition = new Vector2(0, newY - screenCenter.y); // 锚点相对定位
-        targetRect.y = newY;
+
+        // 更新 targetRect
+        targetRect = GetWorldScreenRect(targetArea.GetComponent<RectTransform>());
     }
 
     void CheckHookInTarget()
@@ -321,10 +321,42 @@ public class FishingManager : MonoBehaviour
     void CatchSuccess()
     {
         GameMenu.instance.gotItemMessageText.text = "得到 " + currentFish.fishName + " 辣！！!";
+        // 实例化一个新的 Item 对象（从预制体）
+        GameObject fishGO = Instantiate(fishItemPrefab); // 克隆预制体（包括所有字段）
+        Item fishItem = fishGO.GetComponent<Item>();
+
+        // 只修改名称，保留原有属性
+        fishItem.itemName = currentFish.fishName;
+
+        bool itemExists = false;
+        for (int i = 0; i < GameManager.instance.existingItems.Length; i++)
+        {
+            if (GameManager.instance.existingItems[i].itemName == currentFish.fishName)
+            {
+                itemExists = true;
+
+                i = GameManager.instance.existingItems.Length;
+            }
+        }
+
+        if (!itemExists)
+        {
+            // 将数组转换为List
+            List<Item> strList = new List<Item>(GameManager.instance.existingItems);
+
+            // 添加新元素
+            strList.Add(fishItem);
+
+            // 将List转换回数组
+            GameManager.instance.existingItems = strList.ToArray();
+        }
+
+        Shop.instance.selectedItem = fishItem;
+        GameManager.instance.AddItem(fishItem.itemName);
         StartCoroutine(gotItemMessageCo());
         hasSucceeded = true;
         hasEscaped = true; // 防止逃脱和成功同时触发
-        Invoke(nameof(CloseMinigame), 1.5f);
+        Invoke(nameof(CloseMinigame), 3.5f);
     }
 
     void EscapeFish()
@@ -335,7 +367,7 @@ public class FishingManager : MonoBehaviour
         Debug.Log(currentFish.fishName + " 逃跑了！");
         hasEscaped = true;
         hasSucceeded = true; // 防止成功和逃脱同时触发
-        Invoke(nameof(CloseMinigame), 1.5f);
+        Invoke(nameof(CloseMinigame), 3.5f);
     }
 
     void CloseMinigame()
@@ -348,6 +380,8 @@ public class FishingManager : MonoBehaviour
         hasEscaped = false;
         hasHookSunk = false; // 新增：重置“沉底”状态
         outOfZoneTimer = 0f;
+
+        SceneManager.LoadScene(GameManager.previousSceneName);
     }
 
     void HookSunk()
@@ -357,7 +391,7 @@ public class FishingManager : MonoBehaviour
         Debug.Log("你的鱼钩沉底了！");
 
         hasEscaped = true; // 阻止其他失败/成功逻辑同时触发
-        Invoke(nameof(CloseMinigame), 1.5f);
+        Invoke(nameof(CloseMinigame), 3.5f);
     }
     void CheckHookSunk()
     {

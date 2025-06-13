@@ -65,4 +65,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Tutorial Maps/Tutorial Town.unity
     guid: b8fcb41ce1e923b44b0feeae5abb32cd
+  - enabled: 1
+    path: Assets/2D RPG Kit/Scenes/Demo/Fishing.unity
+    guid: 44dd31ac78728d54cb65d58352a1b885
   m_configObjects: {}

@@ -324,7 +324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 237.5, y: -6}
+  m_AnchoredPosition: {x: -5, y: 5}
   m_SizeDelta: {x: 8.321, y: 10.7698}
   m_Pivot: {x: 0.50000036, y: 0.50000006}
 --- !u!114 &1033281587
@@ -584,6 +584,8 @@ MonoBehaviour:
   targetArea: {fileID: 1883614921}
   hookPointer: {fileID: 1033281586}
   staminaBar: {fileID: 1719562515}
+  fishItemPrefab: {fileID: 1776286149934772, guid: 73402dec421e7444a8e4e8dbbee9638e,
+    type: 3}
   currentRegion: Hot
   fallSpeed: 200
   riseSpeed: 400
