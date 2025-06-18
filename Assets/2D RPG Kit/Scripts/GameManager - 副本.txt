@@ -74,7 +74,6 @@ public class GameManager : MonoBehaviour {
     public bool infiniteGold;
     public bool noEncounters;
 
-    public string currentFishArea = "Normal";
     // Use this for initialization
 
     public static string previousSceneName;
@@ -84,9 +83,8 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject); // 保持这个对象不被销毁
     }
 
-    public static void LoadFishingScene(string areaName)
+    public static void LoadFishingScene()
     {
-        GameManager.instance.currentFishArea = areaName;
         previousSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Fishing");
     }

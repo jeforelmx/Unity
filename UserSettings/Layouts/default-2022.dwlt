@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2194.286
     height: 1152
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 171
+  controlID: 166
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 135
+  controlID: 130
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -727,9 +727,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -24.860357, y: -3.1965313, z: -0.24296984}
+    m_Target: {x: -9.60136, y: -1.2251152, z: -0.041347846}
     speed: 2
-    m_Value: {x: -24.860357, y: -3.1965313, z: -0.24296984}
+    m_Value: {x: 4.410368, y: -0.2842971, z: -0.048828125}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -779,9 +779,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 34.29699
+    m_Target: 14.134788
     speed: 2
-    m_Value: 34.29699
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -985,9 +985,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46a10000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1afbffff
+      m_SelectedIDs: 26c5feff
+      m_LastClickedID: -80602
+      m_ExpandedIDs: 2cdefeffcae4feff8ee5feff7ee6feff16e9feffd6ebfeffd6eefeff70fefeff4c36ffff1afbffffd86b0000f06b000022ad00006ead00007aad000092ad00004cb400009ab40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1057,7 +1057,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/2D RPG Kit/Prefabs/Main
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1065,16 +1065,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources
+  - Assets/2D RPG Kit/Prefabs/Main
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Unity3d\My project (3)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5ea10000
-    m_LastClickedID: 41310
-    m_ExpandedIDs: 000000000ea1000010a1000012a1000016a1000018a1000000ca9a3b
+    scrollPos: {x: 0, y: 175}
+    m_SelectedIDs: 529f0000
+    m_LastClickedID: 40786
+    m_ExpandedIDs: 00000000169f0000189f00001a9f00001c9f00001e9f0000209f0000229f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1102,7 +1102,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000ea1000010a1000012a1000014a1000016a1000018a10000
+    m_ExpandedIDs: 00000000169f0000189f00001a9f00001c9f00001e9f0000209f0000229f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1129,8 +1129,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300007e710000347100000a71000034700000886e0000b8740000147300005a74000084750000c8710000b2800000cc800000f8dd000002de000060c20000c2870000b2790000d0920000ea6c0000b0890000eaea000076f000007af00000248b0000ca920000e48a00007c880000b4630000e4d80000ee9e00009e8a000008100100b26c0000e09e000030a20000f0d40000ae6d0300066f0000c08c0000126c00003a880000486a00001aaa000000000000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300007e710000347100000a71000034700000886e0000b8740000147300005a74000084750000c8710000b2800000cc800000f8dd000002de000060c20000c2870000b2790000d0920000ea6c0000b0890000eaea000076f000007af00000248b0000ca920000e48a00007c880000b4630000e4d80000ee9e00009e8a000008100100b26c0000e09e000030a20000f0d40000ae6d0300066f0000c08c0000126c00003a880000486a00001aaa000042ba000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

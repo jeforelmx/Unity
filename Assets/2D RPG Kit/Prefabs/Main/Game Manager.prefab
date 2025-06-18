@@ -332,6 +332,7 @@ MonoBehaviour:
   infiniteSP: 0
   infiniteGold: 0
   noEncounters: 0
+  currentFishArea: Normal
 --- !u!114 &2196784565488470404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +387,7 @@ MonoBehaviour:
   - "\u51FB\u8D25\u98CE\u66B4\u7834\u788E\u8005"
   - "\u6700\u540E\u4E00\u5C01\u4FE1"
   - "\u751F\u65E5\u5FEB\u4E501"
-  - 
+  - "\u62DC\u8BBF\u5927\u796D\u53F82025"
   - 
   - 
   - 
@@ -453,6 +454,7 @@ MonoBehaviour:
   - ShatterAnd0
   - "\u52C7\u8005\u7684\u9009\u62E92"
   - "\u4E0E\u4EAE\u8F89\u7684\u7B2C\u4E00\u6B21\u5BF9\u8BDD"
+  - NPCOverworldFish
   completedEvents: 
 --- !u!1 &1527901407061400
 GameObject:

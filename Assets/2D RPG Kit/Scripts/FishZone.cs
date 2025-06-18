@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 public class LakeFishingSpot : MonoBehaviour
 {
     private bool isPlayerNearby = false;
+    public string currentRegion = "Normal";
 
     void Update()
     {
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.F))
         {
-            GameManager.LoadFishingScene();
+            GameManager.LoadFishingScene(currentRegion);
         }
     }
 

@@ -60,47 +60,22 @@ public class FishingManager : MonoBehaviour
     private List<GameObject> fishInstances = new List<GameObject>();
     void Start()
     {
-        currentRegion = GameManager.instance.currentFishArea;
         LoadFishData();
-        StartCoroutine(InitAfterUI()); // 使用协程确保UI已初始化
-    }
-
-    IEnumerator InitAfterUI()
-    {
-        yield return null; // 等待一帧确保UI布局完成
-
         StartCatch();
-        UpdateTargetRect(); // 初始化目标区域
+        screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
     }
 
-    void UpdateTargetRect()
-    {
-        targetRect = GetWorldRect(targetArea);
-    }
     void Update()
     {
 
         if (isCatching)
         {
-            UpdateTargetRect(); // 每帧更新目标区域
-
             HandleHookMovement();
             MoveTargetArea();
             CheckHookInTarget();
             UpdateStamina();
             CheckHookSunk(); // 新增这一行
         }
-    }
-
-    Rect GetWorldRect(RectTransform rectTransform)
-    {
-        Vector3[] corners = new Vector3[4];
-        rectTransform.GetWorldCorners(corners);
-
-        Vector2 min = corners[0];
-        Vector2 max = corners[2];
-
-        return new Rect(min.x, min.y, max.x - min.x, max.y - min.y);
     }
 
     public void SetCurrentRegion(string region)
@@ -201,9 +176,6 @@ public class FishingManager : MonoBehaviour
 
     public void StartCatch()
     {
-        // 设置固定的尺寸
-         targetArea.sizeDelta = new Vector2(80f, 20f);  // 固定宽度为20
-        hookPointer.sizeDelta = new Vector2(30f, 30f); // 固定尺寸为10x10
         // 根据当前区域筛选鱼类
         List<GameObject> filteredFishes = new List<GameObject>();
         foreach (var fishGO in fishInstances)
@@ -344,8 +316,7 @@ public class FishingManager : MonoBehaviour
 
     void CheckHookInTarget()
     {
-        // 获取钩子的世界坐标
-        Vector3 hookPos = Camera.main.WorldToScreenPoint(hookPointer.position);
+        Vector2 hookPos = hookPointer.position;
 
         if (targetRect.Contains(hookPos))
         {
@@ -419,12 +390,9 @@ public class FishingManager : MonoBehaviour
             Shop.instance.selectedItem = fishItem;
             GameManager.instance.AddItem(fishItem.itemName); // 假设 AddItem 方法接受物品名称作为参数
         }
-        isCatching = false;
+        StartCoroutine(gotItemMessageCo());
         hasSucceeded = true;
         hasEscaped = true; // 防止逃脱和成功同时触发
-        hasHookSunk = true;
-        StartCoroutine(gotItemMessageCo());
-        
         Invoke(nameof(CloseMinigame), 3.5f);
     }
 
@@ -432,12 +400,10 @@ public class FishingManager : MonoBehaviour
     {
         if (hasEscaped) return; // 防止重复触发
         GameMenu.instance.gotItemMessageText.text = currentFish.fishName + " 逃跑了！！！";
-        hasEscaped = true;
-        hasSucceeded = true; // 防止成功和逃脱同时触发
-        isCatching = false;
         StartCoroutine(gotItemMessageCo());
         Debug.Log(currentFish.fishName + " 逃跑了！");
-        
+        hasEscaped = true;
+        hasSucceeded = true; // 防止成功和逃脱同时触发
         Invoke(nameof(CloseMinigame), 3.5f);
     }
 
