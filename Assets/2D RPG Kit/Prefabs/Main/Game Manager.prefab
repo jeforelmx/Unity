@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18f511f74eb2254592c491f3e6427f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolbar: 2
-  currentTab: Inventory
+  toolbar: 1
+  currentTab: Items
   characterSlots:
   - {fileID: 1674758041330280}
   - {fileID: 1059803243072380}
@@ -281,6 +281,9 @@ MonoBehaviour:
   - {fileID: 114043814178531382, guid: 139f26f25f37c794da7ab68dbc6caaf0, type: 3}
   - {fileID: 114043814178531382, guid: 5081746782d12044ca983adc592abc2b, type: 3}
   - {fileID: 114774137024542062, guid: 428d63fbcb197f94ca3bba5215a3bb45, type: 3}
+  - {fileID: 114043814178531382, guid: d9513669f77a05948b32b18148cbc546, type: 3}
+  - {fileID: 114774137024542062, guid: 24954e6a686130644ac39db97cf4b936, type: 3}
+  - {fileID: 114774137024542062, guid: 6c5d7d2e04d285e4cbc3ade2ce1fa872, type: 3}
   itemsInInventory:
   - {fileID: 114774137024542062, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
   - {fileID: 114378626586349076, guid: 26e1e121bffd9124991f910e445b649e, type: 3}
